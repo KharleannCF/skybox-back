@@ -7,6 +7,7 @@ router.get("/scenes", async (req, res) => {
 });
 
 router.get("/scenes/getImages/:name", async (req, res) => {
+	console.log("asdasdasdasdasd")
 	const scenes = await sceneController.getImages(req.params.name);
 	res.status(200).json({ ok: true, scenes });
 });

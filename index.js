@@ -1,16 +1,13 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 8080;
+const port = 3001;
 const fs = require("fs");
 const multer = require("multer");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const router = require("./router/index");
 const im = require("jimp");
 // =============== CONFIG
-
-app.use(bodyParser.json());
 app.use(express.json());
 //app.use(express.static(path.join(__dirname, "public"), { dotfiles: "allow" }));
 
@@ -92,6 +89,6 @@ app.get("*", (req, res) => {
 	return;
 });
 
-app.listen((process.env.PORT || 5000), () => {
+app.listen(process.env.PORT || port, () => {
 	console.log(`Example app listening at http://localhost:${port}`);
 });

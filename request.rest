@@ -3,3 +3,6 @@ GET http://localhost:3001/api/scenes
 ###
 
 GET http://localhost:3001/api/scenes/getimages/real 
+
+###
+GET http://localhost:3001/test
