@@ -1,6 +1,7 @@
 on: 
  push:
-  types: [closed] 
+  branches:
+      - main
 jobs:
   repo-sync:
     if: github.event.pull_request.merged == true
