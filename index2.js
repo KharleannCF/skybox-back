@@ -8,7 +8,7 @@ const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
 const cors = require("cors");zxczxc;
-const im = require("jimp");zxZxzZZXZxZx;
+const im = require("jimp");sadasdasdasdasd;
  */
 // =============== CONFIG
 /* 
@@ -84,7 +84,7 @@ app.post("/upload", (req, res) => {
 });
  */
 app.get("/test", (req, res) => {
-	res.json({ ok: true });
+  res.json({ ok: true });
 });
 /* 
 app.use("/api", router);
@@ -95,5 +95,5 @@ app.get("*", (req, res) => {
 });
  */
 app.listen(process.env.PORT || 3001, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
