@@ -6,3 +6,7 @@ GET http://localhost:3001/api/scenes/getimages/real
 
 ###
 GET http://localhost:3001/test
+
+###
+
+GET https://better-weak-ping.glitch.me/api/scenes
