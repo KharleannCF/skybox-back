@@ -8,7 +8,7 @@ const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
 const cors = require("cors");
-const im = require("jimp");
+const im = require("jimp");zxZxzZZXZxZx
  */
 // =============== CONFIG
 /* 
