@@ -24,5 +24,6 @@ module.exports = {
       result[elem.split("/").pop().split(".")[0]] = elem;
     });
     return result;
+    //ttest
   },
 };
