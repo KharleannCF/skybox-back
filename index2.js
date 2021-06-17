@@ -7,8 +7,8 @@ require("./database");
 const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
-const cors = require("cors");zxczxc
-const im = require("jimp");zxZxzZZXZxZx
+const cors = require("cors");zxczxc;
+const im = require("jimp");zxZxzZZXZxZx;
  */
 // =============== CONFIG
 /* 
