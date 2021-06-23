@@ -26,4 +26,16 @@ module.exports = {
     return result;
     //ttest
   },
+  deleteFolder: async (folder) => {
+    try {
+      await fs.rmdirSync(path.join(__dirname, `../public/data/${folder}`), {
+        recursive: true,
+      });
+      return { ok: true };
+    } catch (err) {
+      console.log(err);
+      return { ok: false, error: err };
+    }
+    //ttest
+  },
 };
