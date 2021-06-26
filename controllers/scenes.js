@@ -38,4 +38,18 @@ module.exports = {
     }
     //ttest
   },
+  setImages: async (folder) => {
+    fs.readdirSync(path.join(__dirname, `../public/data/${folder}`), {
+      withFileTypes: true,
+    }).forEach(async (dirent) => {
+      const image = await im.read(
+        path.join(__dirname, `../public/data/${folder}/${dirent.name}`)
+      );
+      await image.resize(1024, 1024);
+      await image.quality(90);
+      await image.writeAsync(
+        path.join(__dirname, `../public/data/${folder}/${dirent.name}`)
+      );
+    });
+  },
 };
