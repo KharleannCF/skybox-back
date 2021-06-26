@@ -1,6 +1,7 @@
 const fs = require("fs");
 const multer = require("multer");
 const path = require("path");
+const Box = require("../models/Box");
 
 const storageMul = multer.diskStorage({
   destination: async function (req, file, cb) {
@@ -14,7 +15,7 @@ const storageMul = multer.diskStorage({
       );
       cb(null, `./public/data/${req.body.text}`);
     } catch (error) {
-      res.json({ ok: false, error });
+      console.log(error);
       return error;
     }
   },
@@ -34,8 +35,8 @@ const storageMul = multer.diskStorage({
 const upload = multer({
   storage: storageMul,
 }).fields([
-  { name: "front" },
   { name: "right" },
+  { name: "front" },
   { name: "back" },
   { name: "left" },
   { name: "top" },

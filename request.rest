@@ -13,7 +13,8 @@ GET https://better-weak-ping.glitch.me/api/test2
 
 ###
 
-DELETE http://localhost:3001/api/scenes/Test
+DELETE http://localhost:3001/api/scene/Test31
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ2NTc4YjMxZjAyMzBhOTQ3ZmM0ZGEiLCJpYXQiOjE2MjQ2NzQ0NDJ9.OoO-Gm4s45olHIhsFoEdxVALd-tEFFUygt03uRdPlhw
 
 ###
 
@@ -40,3 +41,4 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3001/api/user/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ2NTc4YjMxZjAyMzBhOTQ3ZmM0ZGEiLCJpYXQiOjE2MjQ2NzQ0NDJ9.OoO-Gm4s45olHIhsFoEdxVALd-tEFFUygt03uRdPlhw

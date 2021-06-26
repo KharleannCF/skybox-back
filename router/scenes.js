@@ -1,18 +1,17 @@
 const router = require("express").Router();
 const sceneController = require("../controllers/scenes");
 const upload = require("../middlewares/multer");
-const fs = require("fs");
-const path = require("path");
-const im = require("jimp");
+const session = require("../middlewares/session");
 
-router.get("/", async (req, res) => {
-  const scenes = await sceneController.getScenes();
+router.get("/", session, async (req, res) => {
+  const scenes = await sceneController.getScenes(req.user);
+  console.log(scenes);
   res.status(200).json({ ok: true, scenes });
 });
 
-router.post("/", upload, async (req, res) => {
+router.post("/", session, upload, async (req, res) => {
+  await sceneController.setImages(req.body.text, req.user);
   res.status(200).json({ ok: true });
-  await sceneController.setImages(req.body.text);
 });
 
 router.get("/getImages/:name", async (req, res) => {
@@ -20,8 +19,8 @@ router.get("/getImages/:name", async (req, res) => {
   res.status(200).json({ ok: true, scenes });
 });
 
-router.delete("/:name", async (req, res) => {
-  const result = await sceneController.deleteFolder(req.params.name);
+router.delete("/:name", session, async (req, res) => {
+  const result = await sceneController.deleteFolder(req.params.name, req.user);
   res.status(200).json(result);
 });
 
